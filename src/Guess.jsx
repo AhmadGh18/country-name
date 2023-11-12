@@ -30,12 +30,6 @@ export default function Guess() {
     if (clickedCountry.name === wanted.name) {
       setcorrect(correct + 1);
       window.localStorage.setItem("heightscore", correct);
-
-      if (JSON.parse(localStorage.getItem("heightscore")) > correct) {
-        window.localStorage.setItem("heightscore", correct);
-
-        sethightsscore(correct);
-      }
     } else {
       setwrong(wrong + 1);
     }
